@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 2b6eb6305e95c86488668f5bd67d5901
-timeCreated: 1429446142
+timeCreated: 1429468039
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,7 @@ TextureImporter:
     21300004: Menu_2
     21300006: Menu_3
     21300008: Menu_4
+    21300010: Menu_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -101,6 +102,16 @@ TextureImporter:
         y: 381
         width: 56
         height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Menu_5
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 375
+        width: 139
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

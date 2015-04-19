@@ -43,9 +43,11 @@ public class StoryScript : MonoBehaviour {
 		}
 		else
 		{
+			AudioMgr.Instance.PlayBtnSfx();
+
 			if(curPage + 1 >= Pages.Count)
 			{
-				Application.LoadLevel("MainMenu");
+				Application.LoadLevel(GameMgr.Scene_MainMenu);
 			}
 			else
 			{

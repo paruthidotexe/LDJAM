@@ -1,0 +1,32 @@
+Credits
+
+Game Developed 
+by
+K.Ponniah @PARUTHIDOTEXE
+
+Music by
+Unity Asset STORE
+
+Tools
+UNitY 5
+MagicaVoxel
+GIMP
+INKSCAPE
+BLEDER
+FFSPLIT & OBS
+SOURCETREE
+GIT
+GITHUB.COM
+
+THANKS TO
+LUDUM DARE TEAM
+THIS IS FIRST TIME FOR ME HERE
+
+SPECIAL THANKS TO
+UNITY ANSWERS
+
+COLLECT CODE, ART ETC FROM
+http://paruthidotexe.blogspot.in/
+
+
+ 
