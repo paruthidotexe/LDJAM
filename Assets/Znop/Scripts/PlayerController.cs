@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 
 	float speed = 0;
+	float fwdSpeed = 0.5f;
+	float rotAngle = 5;
 	public static Vector3 PlayerPos = Vector3.zero;
 
 	void Start () {	
@@ -13,19 +15,19 @@ public class PlayerController : MonoBehaviour {
 	{
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			transform.Rotate(transform.up, -10);			
+			transform.Rotate(transform.up, -rotAngle);			
 		}
 		else if(Input.GetKey(KeyCode.RightArrow))
 		{
-			transform.Rotate(transform.up, 10);			
+			transform.Rotate(transform.up, rotAngle);			
 		}
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			speed += 1;
+			speed += fwdSpeed;
 		}
 		else if(Input.GetKey(KeyCode.DownArrow))
 		{
-			speed -= 5;
+			speed -= fwdSpeed;
 		}
 		if(speed < 1)
 			speed = 1;
@@ -35,5 +37,13 @@ public class PlayerController : MonoBehaviour {
 		transform.position += transform.forward * Time.deltaTime * speed;
 
 		PlayerPos = transform.position;
+	}
+
+	void OnCollisionEnter(Collision collision) {
+		if(collision.gameObject.CompareTag("Missile1") || collision.gameObject.CompareTag("Missile2"))
+		{
+			AudioMgr.Instance.PlayExplosion();
+			GameMgr.Instance.GameState = 2;
+		}
 	}
 }

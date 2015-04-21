@@ -9,6 +9,11 @@ public class GameMgr : MonoBehaviour
 	public const string Scene_InGame = "InGame";
 	public const string Scene_Credits = "Credits";
 
+
+	public int GameState = 0; //0 = normal, 1= pause, 2 = over
+	public long enemiesKilled = 0;
+	public long missleLaunched = 0;
+
 	private static GameMgr instance = null;
 	public static GameMgr Instance
 	{

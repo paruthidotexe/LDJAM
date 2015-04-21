@@ -4,6 +4,8 @@ using System.Collections;
 public class AudioMgr : MonoBehaviour {
 
 	public AudioClip ButtonSelect;
+	public AudioClip ShipAlert;
+	public AudioClip Explosion;
 
 	private static AudioMgr instance = null;
 	public static AudioMgr Instance
@@ -48,6 +50,20 @@ public class AudioMgr : MonoBehaviour {
 	{
 		AudioSource audioSrc = gameObject.GetComponent<AudioSource>() as AudioSource;
 		audioSrc.clip = ButtonSelect;
+		audioSrc.Play();
+	}
+
+	public void PlayShipAlert()
+	{
+		AudioSource audioSrc = gameObject.GetComponent<AudioSource>() as AudioSource;
+		audioSrc.clip = ShipAlert;
+		audioSrc.Play();
+	}
+
+	public void PlayExplosion()
+	{
+		AudioSource audioSrc = gameObject.GetComponent<AudioSource>() as AudioSource;
+		audioSrc.clip = Explosion;
 		audioSrc.Play();
 	}
 }
