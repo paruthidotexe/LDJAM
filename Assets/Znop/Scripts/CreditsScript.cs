@@ -22,6 +22,7 @@ public class CreditsScript : MonoBehaviour {
 		{
 			OnMainMenu();
 		}
+        /*
 		transform.position = Vector3.Lerp(transform.position, endPos, Time.deltaTime);
 		transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(endRotation), Time.deltaTime);
 
@@ -32,6 +33,9 @@ public class CreditsScript : MonoBehaviour {
 			transform.rotation = Quaternion.Euler(endRotation);
 			ShowCredits();
 		}
+         * */
+
+        LeanTween.move(gameObject, new Vector3[] { new Vector3(0f, 0f, 0f), new Vector3(1f, 0f, 0f), new Vector3(1f, 0f, 0f), new Vector3(1f, 0f, 1f) }, 1.5f).setEase(LeanTweenType.easeOutQuad).setOrientToPath(true); ;
 	}
 
 	void ShowCredits()

@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 	float speed = 0;
 	float fwdSpeed = 0.5f;
 	float rotAngle = 5;
+	float rotSpeed = 10;
 	public static Vector3 PlayerPos = Vector3.zero;
 
 	void Start () {	
@@ -15,11 +16,11 @@ public class PlayerController : MonoBehaviour {
 	{
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			transform.Rotate(transform.up, -rotAngle);			
+			transform.Rotate(transform.up, Time.deltaTime * -rotAngle * rotSpeed);			
 		}
 		else if(Input.GetKey(KeyCode.RightArrow))
 		{
-			transform.Rotate(transform.up, rotAngle);			
+			transform.Rotate(transform.up, Time.deltaTime * rotAngle * rotSpeed);			
 		}
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
